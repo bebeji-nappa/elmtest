@@ -1,0 +1,15 @@
+@(msg: String)
+
+@main("Welcome to Elm") {
+  <div id="app"></div>
+  <div id="menu">
+    <a href="users">users</a>
+  </div>
+  <input type="hidden" id="hidden" value="@msg">
+  <script type="text/javascript">
+    Elm.Main.init({
+      node: document.getElementById("app"),
+      flags: `@msg`
+    });
+  </script>
+}
